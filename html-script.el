@@ -4,7 +4,7 @@
 ;; Copyright (C) 2005 by P J Heslin
 ;;
 ;; Author: Peter Heslin <p.j.heslin@dur.ac.uk>
-;; URL: http://www.dur.ac.uk/p.j.heslin/Software/Emacs/Download/html-script.el
+;; URL: http://www.dur.ac.uk/p.j.heslin/Software/Emacs
 ;; Version: 2.1
 ;;
 ;; This program is free software; you can redistribute it and/or modify
