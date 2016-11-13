@@ -52,6 +52,11 @@
 ;;
 ;;  (require 'html-script)
 ;;
+;;  (setq html-script-key [C-f12])
+;;  (setq html-script-install-modes '(nxml-mode html-mode web-mode))
+;;
+;;  (html-script-init)
+;;
 ;; There are various customizations available, including a list of
 ;; modes in which to install html-script (defaults to html-mode and
 ;; nxml-mode).
