@@ -11,12 +11,12 @@
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation; either version 2, or (at your option)
 ;; any later version.
-;; 
+;;
 ;; This program is distributed in the hope that it will be useful,
 ;; but WITHOUT ANY WARRANTY; without even the implied warranty of
 ;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;; GNU General Public License for more details.
-;; 
+;;
 ;; You should have received a copy of the GNU General Public License
 ;; along with GNU Emacs; see the file COPYING.  If not, write to
 ;; the Free Software Foundation, 675 Massachusettes Ave,
@@ -54,7 +54,7 @@
 ;;
 ;; There are various customizations available, including a list of
 ;; modes in which to install html-script (defaults to html-mode and
-;; nxml-mode). 
+;; nxml-mode).
 ;;
 ;; You also need to have the relevant autoloads set up for the script
 ;; modes you want to use, like so:
@@ -157,7 +157,7 @@ The key to bind is defined by html-script-key")
           (message "Not in a script region."))
       (message "End of script region not found."))
     (goto-char orig)))
-     
+
 
 (defun html-script-widen ()
   (interactive)
@@ -170,10 +170,11 @@ The key to bind is defined by html-script-key")
 (defun html-script-install-narrow-key ()
   (local-set-key html-script-key 'html-script-narrow))
 
-(dolist (x html-script-install-modes)
-  (add-hook 
-   (intern (concat (symbol-name x) "-hook"))
-   'html-script-install-narrow-key))
+(defun html-script-init ()
+  (interactive)
+  (dolist (x html-script-install-modes)
+    (add-hook
+     (intern (concat (symbol-name x) "-hook"))
+     'html-script-install-narrow-key)))
 
 (provide 'html-script)
-
