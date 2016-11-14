@@ -146,7 +146,7 @@ The key to bind is defined by html-script-key")
       (goto-char orig))))
 
 (defun html-script-narrow-handler (orig arg-list)
-  (beginning-of-line)
+  (re-search-forward html-script-start-regexp nil t)
   (let ((ending-re (car arg-list))
         (modes (cdr arg-list))
         (beg (point))
@@ -154,6 +154,7 @@ The key to bind is defined by html-script-key")
     (if (re-search-forward ending-re nil t)
         (if (>= (point) orig)
             (progn
+              (re-search-backward ending-re nil t)
               (setq html-script-original-mode major-mode)
               (narrow-to-region beg (point))
               (loop for x in modes when (fboundp x) do (funcall x) and return nil
