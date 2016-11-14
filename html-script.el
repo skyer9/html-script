@@ -107,14 +107,12 @@ The key to bind is defined by html-script-key")
 (defcustom html-script-regions
   '(("<%" "%>" visual-basic-mode)
     ("<\\?" "\\?>" php-mode c-mode)
-    ("<style[ \t]+type=\"text/css\"" "</style>" css-mode c-mode)
-    ("<style[ \t]+type=\"css\"" "</style>" css-mode c-mode)
-    ("<script[ \t]+language=\"vbscript\"[ \t]*>" "</script>" visual-basic-mode)
-    ("<script[ \t]+type=\"text/vbscript\"[ \t]*>" "</script>" visual-basic-mode)
-    ("<script[ \t]+language=\"javascript\"[ \t]*>" "</script>"
-     ecmascript-mode jde-mode java-mode javascript-generic-mode c-mode)
-    ("<script[ \t]+type=\"text/javascript\"[ \t]*>" "</script>"
-     ecmascript-mode jde-mode java-mode javascript-generic-mode c-mode))
+    ("<style[ \t]+type=[\"']text/css[\"'][ \t]*>" "</style>" css-mode c-mode)
+    ("<style[ \t]+type=[\"']css[\"'][ \t]*>" "</style>" css-mode c-mode)
+    ("<script[ \t]+language=[\"']vbscript[\"'][ \t]*>" "</script>" visual-basic-mode)
+    ("<script[ \t]+type=[\"']text/vbscript[\"'][ \t]*>" "</script>" visual-basic-mode)
+    ("<script[ \t]+language=[\"']javascript[\"'][ \t]*>" "</script>" js2-mode js-mode)
+    ("<script[ \t]+type=[\"']text/javascript[\"'][ \t]*>" "</script>" js2-mode js-mode))
   "Define script regions.  Each entry should consist of a list of
   a starting regexp, an ending regexp, and a list of modes to try
   for that region in that order.")
