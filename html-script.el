@@ -111,7 +111,7 @@ The key to bind is defined by html-script-key")
     ("<style[ \t]+type=[\"']css[\"'][ \t]*>" "</style>" css-mode c-mode)
     ("<script[ \t]+language=[\"']vbscript[\"'][ \t]*>" "</script>" visual-basic-mode)
     ("<script[ \t]+type=[\"']text/vbscript[\"'][ \t]*>" "</script>" visual-basic-mode)
-    ("<script[ \t]+language=[\"']javascript[\"'][ \t]*>" "</script>" js2-mode js-mode)
+    ("<script\\([ \t]+language=[\"']javascript[\"']\\)\?[ \t]*>" "</script>" js2-mode js-mode)
     ("<script[ \t]+type=[\"']text/javascript[\"'][ \t]*>" "</script>" js2-mode js-mode))
   "Define script regions.  Each entry should consist of a list of
   a starting regexp, an ending regexp, and a list of modes to try
